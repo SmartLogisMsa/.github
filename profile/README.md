@@ -123,7 +123,7 @@
     </td>
     <td align="left">
       - RabbitMQ, Spring Cloud Stream을 활용한 주문-배송 이벤트 기반 연동 구현<br/>
-      - OpenFeign을 통한 User Service 통신 및 주문자 정보 자동화 개발<br/>
+      - OpenFeign을 통한 마이크로서비스 통신 및 주문-배송 도메인 개발<br/>
       - 배송 상태 관리 API 및 배송 기록 기반 자동 동기화 로직 구현<br/>
     </td>
   </tr>
