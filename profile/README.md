@@ -13,7 +13,7 @@
   - **이벤트 기반 통신**: RabbitMQ를 활용한 비동기 메시징으로 서비스 간 느슨한 결합
   - **서비스 디스커버리**: Eureka를 통한 동적 서비스 등록 및 발견
   - **중앙 집중식 설정 관리**: Spring Cloud Config Server를 통한 설정 관리
-  - **인증 및 권한 관리**: Keycloak 기반 OAuth 2.0 인증
+  - **인증 및 권한 관리**: Keycloak 기반의 토큰 인증
   - **분산 추적 및 모니터링**: Zipkin, Prometheus, Loki를 활용한 통합 관찰성
   - **AI 기반 알림**: Spring AI를 활용한 배송 알림 메시지 자동 생성 및 Slack 알림
   - **API Gateway**: 단일 진입점을 통한 라우팅, 인증, 로드 밸런싱
@@ -77,10 +77,10 @@
 - 재고 보충 자동화
   - 재고 부족 시 재고 보충 이벤트를 발행을 통한 자동화
 
-#### AI 알림
-- Spring AI 기반 배송 알림 메시지 자동 생성
-- Slack을 통한 배송 기사 실시간 알림
-- AI 실행 이력 조회 및 관리
+#### AI & 알림
+- Spring AI 기반 최종 발송 시한 예측 및 배송 알림 메시지 자동 생성
+- Slack을 통한 배송 담당자 실시간 알림
+- AI 및 Slack 실행 이력 조회 및 관리
 
 
 ## 👔 팀원 및 역할
@@ -94,9 +94,11 @@
       </a>
     </td>
     <td align="left">
-      - 회원 도메인 개발<br/>
-      - AI 도메인 개발<br/>
-      - 개발 개발<br/>
+      - Keycloak 기반 인증/인가 구현<br/>
+      - Gateway 블랙리스트와 역할(ROLE) 캐싱으로 권한 검증 성능 향상 및 차단 구현<br/>
+      - Spring AI와 Vertex AI를 통한 최종 발송 시한 계산 및 자동 메세지 생성 구현<br/>
+      - RabbitMQ 및 Spring Cloud 기반 배송-알림 서비스 이벤트 구현<br/>
+      - 공통 모듈 개발 및 배포, 인프라 구성(Eureka, Config Server, Gateway Server)
     </td>
   </tr>
   <tr>
@@ -167,8 +169,8 @@
 | **hub-service** | 허브 관리 - 허브 정보, 허브 네트워크, 경로 계산, Redis 캐싱 |
 | **product-service** | 상품 관리 - 상품 정보, 재고 관리 |
 | **company-service** | 업체 관리 - 업체 정보, 업체별 배송 관리 |
-| **ai-service** | AI 알림 - Spring AI 기반 배송 알림 메시지 생성 |
-| **notification-service** | 배송 알림 메시지 Slack 발송 |
+| **ai-service** | AI 서비스 - Spring AI 기반 발송 최종 시한 예측 및 알림 메시지 생성 |
+| **notification-service** | 알림 서비스 - 메시지 Slack 발송 |
 
 
 
@@ -187,7 +189,7 @@
 - **Service Discovery**: Netflix Eureka
 - **Configuration**: Spring Cloud Config Server
 - **API Gateway**: Spring Cloud Gateway
-- **Authentication**: Keycloak (OAuth 2.0)
+- **Authentication**: Keycloak
 - **Client**: OpenFeign, Spring Cloud LoadBalancer
 
 #### External APIs & AI
