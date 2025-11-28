@@ -206,7 +206,7 @@
 - **API Docs**: SpringDoc OpenAPI (Swagger UI)
 
 ## ⚒️ 시스템 아키텍처
-<img width="1920" alt="image" src="https://github.com/user-attachments/assets/9cd42e5a-7fd9-4392-be12-2e751834ba8c" />
+<img width="1920" alt="System Architecture" src="https://github.com/user-attachments/assets/d0197e5b-0e5f-4c65-adac-4603a13420aa" />
 
 <img width="1920" alt="ERD" src="https://github.com/user-attachments/assets/0f1a4156-d254-485c-9609-58a66d74d0db" />
 
