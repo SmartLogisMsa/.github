@@ -208,9 +208,7 @@
 ## ⚒️ 시스템 아키텍처
 <img width="1920" alt="image" src="https://github.com/user-attachments/assets/9cd42e5a-7fd9-4392-be12-2e751834ba8c" />
 
-
-<img width="1920" height="1216" alt="image" src="https://github.com/user-attachments/assets/328d8e82-9c50-4615-8549-b697a1cc55ee" />
-
+<img width="1920" alt="ERD" src="https://github.com/user-attachments/assets/0f1a4156-d254-485c-9609-58a66d74d0db" />
 
 ## 실행 방법
 #### 1. **인프라 서비스 실행**
